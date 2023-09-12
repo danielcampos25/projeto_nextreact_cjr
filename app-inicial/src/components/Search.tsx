@@ -7,4 +7,4 @@ const Search = ({search,setSearch, className}) => {
   </div>
 }
 
-export default Search
+export default Search;
