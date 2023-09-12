@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Filter = ({filter,setFilter,setSort}) => {
+const Filter = ({filter,setFilter,setSort}:any) => {
   return (
-    <div className='filter'>
+    <div className='border-2 border-black'>
         <div className="filter-options">
             <div>
                 <p>Filtrar:</p>

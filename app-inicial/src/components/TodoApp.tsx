@@ -1,11 +1,11 @@
 import React from 'react'
 
-const TodoApp = ({todo,removeTodo,completeTodo}: TodoAppProps) => {
+const TodoApp = ({todo,removeTodo,completeTodo}: any) => {
   return (
-    <div className='todo' style ={{
+    <div className='select-none text-center content-center  text-[20px] pb-2 flex space-x-7  border-2 border-black' style ={{
       textDecoration:todo.isCompleted ? "line-through" : ""
     }}>
-              <div className='content'>
+              <div className=''>
                 <p>{todo.text}</p>
                 
                 </div>

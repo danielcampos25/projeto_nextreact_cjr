@@ -1,10 +1,10 @@
 import {useState} from 'react';
 import addTodo from '../pages/index';
 
-const TodoForm = ({addTodo}) => {
+const TodoForm = ({addTodo}:any) => {
     const[value,setValue] = useState("");
    
-    const handleSubmit = (e) => {
+    const handleSubmit = (e:any) => {
         e.preventDefault();
         if(!value) return;
         else addTodo(value)
@@ -12,18 +12,20 @@ const TodoForm = ({addTodo}) => {
         
         console.log(value)
       }
-  return( <div className="bg-blue-500">
+  return( 
     
-    <form onSubmit = {handleSubmit}>
+    <form onSubmit = {handleSubmit} className=' h-20 inline-box'>
         <input 
         value = {value} 
         type="text" 
         placeholder='Título da nova tarefa' 
-        onChange = {(e)=>setValue(e.target.value)}/>
-        <button type ='submit'>Criar</button>
+        onChange = {(e)=>setValue(e.target.value)}
+        className= 'relative bg-inherit border-2 border-black rounded-full w-full py-5 pl-9'/>
+        <button type ='submit' className='absolute text-[#383736] bg-inherit p-2 right-6 top-[93px] font-medium uppercase cursor-pointer rounded-3xl hover:text-[#ffffff] hover:bg-[#de6c5c] 
+          transition ease-in-out delay-150 bg-inherit  hover:scale-110 hover:bg-[#de6c5c] duration-100'>+</button>
     </form>
 
-  </div>)
+  )
 }
 
 export default TodoForm
