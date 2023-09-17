@@ -39,7 +39,7 @@ export default function Home() {
   
   
   return (
-    <main className ="relative accent-blue-200 items-center justify-between p-20 box-border selection:text-white selection:bg-[#de6c5c] min-h-[100vh]" >
+    <main className ="relative bg-orange-50 items-center justify-between p-20 box-border selection:text-white selection:bg-[#de6c5c] min-h-[100vh]" >
         <div>
         <div className="inline-flex">
         <h1 className='text-5xl flex font-medium text-left font-Montserrat tracking-wide tracking-wide mb-8 '>PraFazê! </h1>
@@ -53,6 +53,9 @@ export default function Home() {
         </div>
         <TodoForm  addTodo= {addTodo}/>
         <Search  search={search} setSearch={setSearch}/>
+        <div>
+        <h2 className='text-2xl flex font-bold text-left font-Montserrat tracking-wide tracking-wide mb-8 '>Suas tarefas: </h2>
+        </div>
         
         <div className='select-none text-center content-center  text-[17px]  overflow-y-auto w-full'>
           {todo
